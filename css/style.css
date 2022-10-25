@@ -10,6 +10,15 @@ body{
     
 }
 
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0D606F;
+}
+
 /*  navigation ========================================== */
 .nav {
     width: 100%;
@@ -63,12 +72,10 @@ body{
 }
 
 .btn-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   
     width: 103px;
     height: 41px;
-    background: #0D606F;
+   
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     color: #fff;
@@ -96,11 +103,11 @@ body{
     line-height: 96px;
 }
 .header-text {
-
     font-style: italic;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 20px;
-    padding: 46px 0;
+    padding-top: 30px;
+    padding-bottom: 46px;
 }
 
 .header-search {
@@ -129,21 +136,25 @@ body{
   }
 
 .search-btn{
-    padding: 10px 32px;
+   
+    width: 228px;
+    height: 59px;
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     font-family: 'Red Hat Text';
-    font-style: normal;
+    font-weight: 500;
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;
 
     position: absolute;
-    top: 25%;
-    right: 18px;
+    top: 20%;
+    right: 19px;
 }
 
 
@@ -161,7 +172,7 @@ body{
 /* steps ===================================== */
 
 .steps-content {
-    padding: 97px 132px;
+    padding: 80px 132px 95px;
   
 }
 
@@ -233,18 +244,13 @@ body{
     left: 15px;
 }
 .destination-btn {
-    display: flex;
-    align-items: center;
+ 
     margin: 0 auto;
-    justify-content: center;
     width: 228px;
     height: 59px;
-    background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     font-weight: 500;
-
-
     font-size: 24px;
     color: #FFFFFF;
 }
@@ -271,7 +277,7 @@ body{
 
 .stories-content {
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px 120px 40px;
+    padding: 10px 120px 40px;
     
    
 }
@@ -299,6 +305,7 @@ body{
     color: #0D606F;
 }
 .stories-item-text {
+    padding-top: 23px;
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
@@ -312,18 +319,15 @@ body{
 }
 
 .stories-btn{
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 
 /* footer ============== */
 
-.footer-space{
-   
-}
 .footer-content {
     display: flex;
-    padding-left: 40%;
+    padding-left: 41%;
     padding-right: 120px;
     justify-content: space-between;
     align-items: center;
