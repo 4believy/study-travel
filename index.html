@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text:300,regular,500,600,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Aleo:300,300italic,regular,italic,700,700italic" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,20 +22,38 @@
 
               
                     <ul class="nav-link">
-                        <li><a href="#">How It Works</a></li>
-                        <li><a href="#">Plan Your Trip</a></li>
-                        <li><a href="#">Destinations</a></li>
-                        <li><a href="#">Travel Stories</a></li>
+                        <li><a data-goto=".header" id="scroll1" href="#">How It Works</a></li>
+                        <li><a data-goto=".steps" id="scroll2" href="#">Plan Your Trip</a></li>
+                        <li><a data-goto=".destinations" id="scroll3" href="#">Destinations</a></li>
+                        <li><a data-goto=".stories" id="scroll4" href="#">Travel Stories</a></li>
                     </ul>
                 
 
                 <div class="nav-login">
-                    <a href="" class="btn-login btn">Login</a>
+                    <a href="#" id="loginBtn" class="btn-login btn">Login</a>
+                </div>
+
+                <div class="burger-menu">
+                    <button ><img id="burgerOpen" class="burger-img" src="/img/burger/eva_menu-outline.svg" alt=""></button>
                 </div>
 
             </div>
         </div>
     </nav>
+
+    <div id='burger' class="burger-nav ">
+        <div class="burger-menu-inside">
+            <button id="burgerClose" ><img class="burger-img-inside" src="/img/burger/clarity_window-close-line.svg" alt=""></button>
+        </div>
+        <ul class="nav-link-burger">
+            <li><a data-goto=".header" href="#">How It Works</a></li>
+            <li><a data-goto=".steps" href="#">Plan Your Trip</a></li>
+            <li><a data-goto=".destinations" href="#">Destinations</a></li>
+            <li><a data-goto=".stories" href="#">Travel Stories</a></li>
+            <li><a id="loginBtn2" href="#">Account</a></li>
+            <li><a data-goto=".footer"href="#">Social Media</a></li>
+        </ul>
+    </div>
 
 <!-- header -->
     <header class="header container">
@@ -82,19 +101,41 @@
 
 
     <!-- section 2 destinations -->
-    <section class="destinations">
-        <div class="container">
-            <h2 class="section-title">POPULAR DESTINATIONS</h2>
-
-            <div class="slider">
-                <div class="slider-item">
-                    <img class="item-img" src="./img/destinations/Japan.jpg" alt="">
-                    <h3 class="item-name">JAPAN</h3>
+    <section class="destination">
+        <div class="destination-container">
+            <h2 id="destination" class="destination-title">POPULAR DESTINATIONS</h2>
+            <div class="destination-slider">
+                <img class="slider-arrow arrow-left" src="./img/destinations/next.svg" alt="Arrow left">
+                <img class="slider-arrow arrow-right" src="./img/destinations/next.svg" alt="Arrow right">
+                <div class="slider">
+                    <div id="item-0" class="destination-slider-pic">
+                        <img src="./img/destinations/Japan.jpg" alt="Japan" class="destination-slider-img">
+                        <span class="destination-country">JAPAN</span>
+                    </div>
+                    <div id="item-1" class="destination-slider-pic">
+                        <img src="./img/destinations/USA.jpg" alt="USA" class="destination-slider-img">
+                        <span class="destination-country">USA</span>
+                    </div>
+                    <div id="item-2" class="destination-slider-pic">
+                        <img src="./img/destinations/Spain.jpg" alt="Spain" class="destination-slider-img">
+                        <span class="destination-country">SPAIN</span>
+                    </div>
+                    <div id="item-3" class="destination-slider-pic">
+                        <img src="./img/destinations/Japan.jpg" alt="Japan" class="destination-slider-img">
+                        <span class="destination-country">JAPAN</span>
+                    </div>
+                    <div id="item-4" class="destination-slider-pic">
+                        <img src="./img/destinations/USA.jpg" alt="USA" class="destination-slider-img">
+                        <span class="destination-country">USA</span>
+                    </div>
                 </div>
             </div>
-
+            <ul class="destination-slider-items">
+                <li class="slider-item slider-item-active"></li>
+                <li class="slider-item"></li>
+                <li class="slider-item"></li>
+            </ul>
             <a href="#" class="btn destination-btn"> <img class="arrow-icon" src="./img/destinations/bi_arrow-right.svg" alt=""> Find More</a>
-
         </div>
     </section> <!-- section 2 destinations -->
 
@@ -108,7 +149,10 @@
 
                     <div class="stories-item">
                         <div class="img-block">
-                            <img   src="./img/stories/item1.jpg" alt="check">
+                            <picture>
+                                <source media="(max-width:390px)" srcset="./img/stories/sm-item1.jpg">
+                                <img   src="./img/stories/item1.jpg" alt="check">
+                            </picture>
                         </div>
                         <div class="text-block">
                             <h3 class="stories-item-title">10 Photos of Attractive Thailand</h3>
@@ -119,7 +163,10 @@
 
                     <div class="stories-item">
                         <div class="img-block">
-                            <img   src="./img/stories/item2.jpg" alt="check">
+                            <picture>
+                                <source media="(max-width:390px)" srcset="./img/stories/sm-item2.jpg">
+                                <img   src="./img/stories/item2.jpg" alt="check">
+                            </picture>
                         </div>
                         <div class="text-block">
                             <h3 class="stories-item-title">Canyonlands National Park, Utah</h3>
@@ -130,7 +177,11 @@
 
                     <div class="stories-item">
                         <div class="img-block">
-                            <img   src="./img/stories/item3.jpg" alt="check">
+                            <picture>
+                                <source media="(max-width:390px)" srcset="./img/stories/sm-item3.jpg">
+                                <img   src="./img/stories/item3.jpg" alt="check">
+                            </picture>
+                            
                         </div>
                         <div class="text-block">
                             <h3 class="stories-item-title">I left my heart in the Mountains!</h3>
@@ -141,7 +192,11 @@
 
                     <div class="stories-item">
                         <div class="img-block">
-                            <img   src="./img/stories/item4.jpg" alt="check">
+
+                            <picture>
+                                <source media="(max-width:390px)" srcset="./img/stories/sm-item4.jpg">
+                                <img   src="./img/stories/item4.jpg" alt="check">
+                            </picture>
                         </div>
                         <div class="text-block">
                             <h3 class="stories-item-title">The Longest journey in my life!</h3>
@@ -172,6 +227,62 @@
     </section>  <!-- section 3 stories -->
 
 
+
+
+
+
+
+
+
+
+
+    <!-- login pop up ==================== -->
+    <section id="loginPopUP" class="login login-display">
+        <div class="pop-up-container">
+            <div class="pop-up-content"  >
+                <h2 class="login-text">Log in to your account</h2>
+                <button class="btn-facebook ">Sign In with Facebook</button>
+                <button class="btn-google">Sign In with Google</button>
+                <span class="line-span"><p class="line"></p><p class="line-text ">or</p><p class="line"></p></span>
+                <label class="pop-up-label">E-mail
+                    <input class="pop-up-input" type="email" name="email" id="email">
+                </label>
+                
+                <label class="pop-up-label">Password
+                    <input class="pop-up-input" type="password" name="password" id="password">
+                </label>
+                <button class="sign-btn">Sign in</button>
+                <a href="#" class="forgot">Forgot Your Password?</a>
+                <div class="line2"></div>
+                <p class="to-register">Don't have an account? <a href="#" id="toRegister" class="register">Register</a></p>
+            </div>
+        </div>
+    </section> <!-- login pop up-->
   
+
+
+
+
+    
+    <section id="SignUpPopUP" class="sign-up sign-up-display">
+        <div class="pop-up-container">
+            <div class="pop-up-content">
+                <h2 class="login-text">Create account</h2>
+                <label class="pop-up-label">E-mail
+                    <input class="pop-up-input" type="email" name="email" id="email">
+                </label>
+                
+                <label class="pop-up-label">Password
+                    <input class="pop-up-input" type="password" name="password" id="password">
+                </label>
+                <button class="sign-btn">Sign in</button>
+                <div class="line2"></div>
+                <p class="to-login">Already have an account? <a href="#" id="toLogIn" class="register">Log in </a></p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./app.js"></script>
+
 </body>
 </html>
